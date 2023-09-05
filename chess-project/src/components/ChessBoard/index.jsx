@@ -1,6 +1,6 @@
 import { Board } from "./style";
 import { chessPieces } from "../../data";
-import Queen  from "../Queen";
+import Piece  from "../Piece";
 
 export const ChessBoard = () => {
   const row = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
@@ -15,7 +15,7 @@ export const ChessBoard = () => {
     const key = `${row[r]}-${column[c]}`;
 
     const piece = chessPieces.find(p => p.id === key);
-    const pieceComponent = piece ? <Queen color={piece.color} type={piece.type} /> : null;
+    const pieceComponent = piece ? <Piece color={piece.color} type={piece.type} /> : null;
 
     board.push(
       <li key={key} className={`grid ${squareColorClass}`}>
