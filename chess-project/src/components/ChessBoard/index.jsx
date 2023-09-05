@@ -15,7 +15,7 @@ export const ChessBoard = () => {
     const key = `${row[r]}-${column[c]}`;
 
     const piece = chessPieces.find(p => p.id === key);
-    const pieceComponent = piece ? <Piece color={piece.color} type={piece.type} /> : null;
+    const pieceComponent = piece ? <Piece id={piece.id} color={piece.color} type={piece.type} /> : null;
 
     board.push(
       <li key={key} className={`grid ${squareColorClass}`}>
